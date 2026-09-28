@@ -13,10 +13,12 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="sobre-mi.html">Sobre mí</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="recomendacionPeliculas.html">Multimedia recomendado</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <section class="container">
         <h1>Sobre mí</h1>
         <p>Un poco más sobre mi trayectoria y mis intereses.</p>
         <hr>
@@ -50,9 +52,9 @@
             Me interesan especialmente el desarrollo <strong>backend</strong>
             y la <strong>ciberseguridad</strong>.
         </p>
-    </div>
+    </section>
 
-    <div class="container">
+    <main class="container">
         <h2>Mis aficiones</h2>
         <p>
             Fuera del mundo digital, encuentro mi equilibrio en la naturaleza.
@@ -62,39 +64,45 @@
         </p>
         <p>Aquí comparto algunos de esos momentos:</p>
 
-        <div class="carousel-viewport">
+        <section class="carousel-viewport">
             <div class="carousel-slide">
-                <div class="carousel-item">
+                <figure class="carousel-item">
                     <img src="public/camino_santiago.jpeg"
                          alt="Una etapa del Camino de Santiago">
-                </div>
-                <div class="carousel-item">
+                    <figcaption>Una etapa del Camino de Santiago</figcaption>
+                </figure>
+                 <figure class="carousel-item">
                     <img src="public/escalada_manzaneda.jpeg"
                          alt="Escalando en Manzaneda">
-                </div>
-                <div class="carousel-item" style="padding-top: 25%">
-                    <img src="public/los_albos.jpeg"
+                         <figcaption>Escalando en Manzaneda</figcaption>
+                </figure>
+                <figure class="carousel-item" style="padding-top: 25%">
+                    <img src="public/los_albos.jpeg"    
                          alt="Paisaje de Los Albos">
-                </div>
-                <div class="carousel-item" style="padding-top: 25%">
+                         <figcaption>Paisaje de los Albos</figcaption>
+                </figure>
+                <figure class="carousel-item" style="padding-top: 25%">
                     <img src="public/teide.jpeg"
                          alt="Visita al Parque Nacional del Teide">
-                </div>
-                <div class="carousel-item">
+                         <figcaption>Visita al Parque Nacional del Teide</figcaption>
+                </figure>
+                <figure class="carousel-item">
                     <img src="public/ruta_de_las_xanas.JPG"
                          alt="Ruta de las Xanas">
-                </div>
-                <div class="carousel-item">
+                         <figcaption>En la ruta de la Xanas</figcaption>
+                </figure>
+                <figure class="carousel-item">
                     <img src="public/albo.jpeg"
                          alt="Ruta por el Albo Oriental">
-                </div>
+                    <figcaption>Ruta por el Albo Oriental</figcaption>
+                </figure>
             </div>
             <button id="prevBtn" class="carousel-btn"
                     type="button" aria-label="Imagen anterior">❮</button>
             <button id="nextBtn" class="carousel-btn"
                     type="button" aria-label="Imagen siguiente">❯</button>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <script src="main.js"></script>
 </body>

@@ -16,10 +16,12 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="sobre-mi.html">Sobre mí</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="recomendacionPeliculas.html">Multimedia recomendado</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <header class="container">
         <img src="public/IMG_9.jpeg" alt="Foto de perfil de David Rodríguez Chanca" class="profile-pic">
 
         <h1>Hola, soy David</h1>
@@ -42,161 +44,73 @@
                 Mi LinkedIn
             </a>
         </div>
-    </div>
+    </header>
 
-    <div class="container">
-        <h1>Habilidades técnicas</h1>
-        <p>Estas son algunas de las tecnologías con las que he trabajado:</p>
-
-        <div class="skills-grid">
-            <div class="skill-item">
-                <img src="public/java.png" alt="Java">
-                <span>Java</span>
-            </div>
-            <div class="skill-item">
+    <main class="container">
+        <h1>¿Con que he trabajado?</h1>
+        <section class="skills-grid">
+            <h3>Estas son alguno de los idiomas:</h3>
+            <article class="skill-item">
+                <img class="skill-item" src="public/java.png" alt="Java">
+                <h6>Java</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/ISO_C++_Logo.svg.png" alt="C++">
-                <span>C++</span>
-            </div>
-            <div class="skill-item">
+                <h6>C++</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/React-icon.svg.png" alt="React">
-                <span>React</span>
-            </div>
-            <div class="skill-item">
+                <h6>React</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/pythonpng.png" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="skill-item">
+                <h6>Python</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/HTML5_.png" alt="HTML">
-                <span>HTML</span>
-            </div>
-            <div class="skill-item">
+                <h6>HTML</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/css.png" alt="CSS">
-                <span>CSS</span>
-            </div>
-            <div class="skill-item">
+                <h6>CSS</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/JavaScript-logo.png" alt="JavaScript">
-                <span>JavaScript</span>
-            </div>
-            <div class="skill-item">
+                <h6>JavaScript</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/spring.png" alt="Spring">
-                <span>Spring</span>
-            </div>
-            <div class="skill-item">
+                <h6>Spring</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/Node.js_logo.svg.png" alt="Node.js">
-                <span>Node.js</span>
-            </div>
-            <div class="skill-item">
+                <h6>Node.js</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/git.png" alt="Git">
-                <span>Git</span>
-            </div>
-            <div class="skill-item">
+                <h6>Git</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/docker.png" alt="Docker">
-                <span>Docker</span>
-            </div>
-            <div class="skill-item">
+                <h6>Docker</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/azure.png" alt="Azure">
-                <span>Azure</span>
-            </div>
-            <div class="skill-item">
+                <h6>Azure</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/mongodb_original_wordmark_logo_icon_146425.png" alt="MongoDB">
-                <span>MongoDB</span>
-            </div>
-            <div class="skill-item">
+                <h6>MongoDB</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/Sql_data_base_with_logo.png" alt="PL/SQL">
-                <span>PL/SQL</span>
-            </div>
-            <div class="skill-item">
+                <h6>PL/SQL</h6>
+            </article>
+            <article class="skill-item">
                 <img src="public/csharp.png" alt="C#">
-                <span>C#</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="container project-section">
-        <h1>Mis proyectos y logros</h1>
-
-        <article class="project-card">
-            <h2>Ganador del II Hackathon en Agentes Inteligentes y Grandes Modelos de Lenguaje</h2>
-            <p>
-                Desarrollé en equipo un agente para optimizar la colocación de
-                elementos sobre un mapa. Combinamos Google Gemini 2.5 Flash,
-                LlamaIndex Workflow, heurísticas y verificación mediante
-                búsqueda en anchura (BFS). El hackathon fue organizado por la
-                Escuela de Ingeniería Informática de la Universidad de Oviedo,
-                con el patrocinio de la Cátedra TotalEnergies de Analítica
-                de Datos e IA.
-            </p>
-        </article>
-
-        <article class="project-card">
-            <h2>API de gestión clínica · en desarrollo</h2>
-            <p>
-                Trabajo en una API REST con Spring Boot, PostgreSQL y Flyway,
-                acompañada de un frontend en React y TypeScript. El proyecto
-                incluye gestión de pacientes y el diseño del inventario por
-                clínicas, lotes, movimientos de stock y consumos asociados
-                a tratamientos.
-            </p>
-        </article>
-
-        <article class="project-card">
-            <h2>Sistema de gestión de talleres</h2>
-            <p>
-                Sistema de gestión de talleres mecánicos desarrollado con
-                Spring. Utilizamos Selenium para las pruebas.
-            </p>
-            <div class="project-links">
-                <a href="https://github.com/Aitorsiius/sdi2425-entrega2-63"
-                   target="_blank" rel="noopener noreferrer" class="link-button">
-                    Ver en GitHub
-                </a>
-            </div>
-        </article>
-
-        <article class="project-card">
-            <h2>¿Quién quiere ser millonario? con IA</h2>
-            <p>
-                Aplicación basada en microservicios con ayudas para responder
-                preguntas mediante Gemini. El juego estuvo disponible en la
-                web durante 2024.
-            </p>
-            <div class="project-links">
-                <a href="https://github.com/Arquisoft/wichat_es6b"
-                   target="_blank" rel="noopener noreferrer" class="link-button">
-                    Ver en GitHub
-                </a>
-            </div>
-        </article>
-
-        <article class="project-card">
-            <h2>Compilador</h2>
-            <p>
-                Compilador basado en ANTLR que transforma código similar a
-                Pascal en instrucciones ejecutables por una máquina virtual
-                educativa.
-            </p>
-            <div class="project-links">
-                <a href="https://github.com/DRChanca/DLP"
-                   target="_blank" rel="noopener noreferrer" class="link-button">
-                    Ver en GitHub
-                </a>
-            </div>
-        </article>
-
-        <article class="project-card">
-            <h2>Web de Fórmula 1</h2>
-            <p>
-                Web desarrollada con HTML, CSS, JavaScript y PHP para consultar
-                información sobre Fórmula 1, como meteorología, circuitos y
-                pilotos. También se desplegó en Azure.
-            </p>
-            <div class="project-links">
-                <a href="https://github.com/DRChanca/WebFormula1"
-                   target="_blank" rel="noopener noreferrer" class="link-button">
-                    Ver en GitHub
-                </a>
-            </div>
-        </article>
-    </div>
+                <h6>C#</h6>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

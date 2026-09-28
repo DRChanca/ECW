@@ -89,6 +89,13 @@ nav a:hover {
     padding: 0 10px;
 }
 
+.skills-grid > h3 {
+    grid-column: 1 / -1;
+    margin: 0 0 10px;
+    text-align: center;
+
+}
+
 .skill-item {
     display: flex;
     flex-direction: column; /* Pone el texto debajo del logo */
@@ -186,6 +193,7 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+
 /* 2. La 'tira' de imágenes
    'display: flex' pone las imágenes en fila.
    'transition' añade la animación suave de deslizamiento
@@ -202,8 +210,9 @@ nav a:hover {
    'flex-shrink: 0' evita que se encojan.
 */
 .carousel-item {
-    width: 100%;
-    flex-shrink: 0;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    margin: 0; /* Quita el margen predeterminado de <figure> */
 }
 
 .carousel-item img {
@@ -212,6 +221,54 @@ nav a:hover {
     display: block; /* Evita espacios extra debajo de la imagen */
 }
 
+header{
+    display: center;
+    text-align: center;
+    justify-content: center;
+}
+
+header + section {
+    text-align: center;
+    video{
+        height: auto;
+        width: 80%;
+    }
+}
+
+
+section {
+    text-align: center;
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2%;
+
+        article {
+            width: 100%;
+            margin-top: 5vh;
+
+            figure {
+                width: 100%;
+                margin: 0;
+
+                img {
+                    width: 80%;
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        div {
+            grid-template-columns: 1fr;
+        }
+    }
+}
 
 .carousel-btn {
     position: absolute;
