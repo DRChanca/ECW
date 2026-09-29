@@ -21,15 +21,15 @@ body > :is(header, main, section, div) {
     background-color: #333;
     box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 10%);
     text-align: center;
-    h1 {
-        color: white;
-    }
 }
 
 h1 {
     color: #2c3e50;
 }
 
+body > :is(header, main, section, div) > h1 {
+    color: white;
+}
 
 /* Navegación */
 nav {
@@ -96,27 +96,26 @@ body > main > section:not(.carousel-viewport) {
     gap: 1.25rem;
     margin-top: 1.875rem;
     padding: 0 0.625rem;
-    h3{
-        grid-column: 1 / -1;
-        margin: 0 0 0.625rem;
-    }
-
-    article{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 0.9em;
-        font-weight: bold;
-        img{
-            width: 3.125rem;
-            height: 3.125rem;
-            margin-bottom: 0.5rem;
-        }
-    }
 }
 
+body > main > section:not(.carousel-viewport) > h3 {
+    grid-column: 1 / -1;
+    margin: 0 0 0.625rem;
+}
 
+body > main > section:not(.carousel-viewport) > article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight: bold;
+}
 
+body > main > section:not(.carousel-viewport) > article img {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-bottom: 0.5rem;
+}
 
 /* Proyectos: los artículos son hijos directos del main. */
 body > main > article {
@@ -128,23 +127,24 @@ body > main > article {
     box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 5%);
     text-align: left;
     transition: box-shadow 0.3s ease;
-    h2{
-        margin-top: 0;
-        color: #3498db;
-    }
-    a{
-        display: inline-block;
-        margin-right: 0.625rem;
-        padding: 0.5rem 0.75rem;
-        border-radius: 0.3125rem;
-        color: #fff;
-        background-color: #333;
-        font-size: 0.9em;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-    }
 }
 
+body > main > article h2 {
+    margin-top: 0;
+    color: #3498db;
+}
+
+body > main > article a {
+    display: inline-block;
+    margin-right: 0.625rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.3125rem;
+    color: #fff;
+    background-color: #333;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 body > main > article:hover {
     box-shadow: 0 0.25rem 0.625rem rgb(0 0 0 / 10%);
 }
