@@ -30,7 +30,7 @@ nav ul { display: flex; justify-content: center; margin: 0; padding: 0; list-sty
 nav a { display: block; padding: 0.9375rem 1.25rem; color: white; font-weight: bold; text-decoration: none; transition: background-color 0.3s ease; }
 nav a:hover { background-color: #555; }
 /* aria-current describe semánticamente el enlace de la página activa. */
-nav a[aria-current="page"] { background-color: #3f3f3f; box-shadow: inset 0 0 0.625rem rgb(0 0 0 / 35%); }
+nav a.active { background-color: #3f3f3f; box-shadow: inset 0 0 0.625rem rgb(0 0 0 / 35%); }
 
 /* Inicio */
 nav + header > img { width: 9.375rem; height: 9.375rem; margin-bottom: 1.25rem; border-radius: 50%; object-fit: cover; }
