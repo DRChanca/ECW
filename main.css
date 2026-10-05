@@ -18,24 +18,24 @@ body > :is(header, main, section, div) {
     margin: 1.25rem auto;
     padding: 1.25rem;
     border-radius: 0.5rem;
-    background-color: #333;
+    background-color: #333; /* Definido en body  */
     box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 10%);
     text-align: center;
 }
 
 h1 {
-    color: #2c3e50;
+    color: #2c3e50; /* Definido en body. */
 }
 
 body > :is(header, main, section, div) > h1 {
-    color: white;
+    color: white; /* Definido en body */
 }
 
 /* Navegación */
 nav {
     width: 100%;
     margin-bottom: 1.875rem;
-    background-color: #333;
+    background-color: #333; /* Definido en body. */
     box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 20%);
 }
 
@@ -50,19 +50,19 @@ nav ul {
 nav a {
     display: block;
     padding: 0.9375rem 1.25rem;
-    color: white;
+    color: white; /* Definido en nav*/
     font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #555; /* Definido en nav a*/
 }
 
 
 nav a.active {
-    background-color: #3f3f3f;
+    background-color: #3f3f3f; /* Definido en nav a */
     box-shadow: inset 0 0 0.625rem rgb(0 0 0 / 35%);
 }
 
@@ -86,11 +86,11 @@ nav + header > aside > a {
 }
 
 nav + header > aside > a:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Definido en nav + header > aside > a*/
 }
 
-/* La sección de tecnologías es la única sección dentro del main de Inicio. */
-body > main > section:not(.carousel-viewport) {
+/* Inicio: las tecnologías son artículos directos del main. */
+body > main:has(> h1 + h2) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
     gap: 1.25rem;
@@ -98,12 +98,12 @@ body > main > section:not(.carousel-viewport) {
     padding: 0 0.625rem;
 }
 
-body > main > section:not(.carousel-viewport) > h3 {
+body > main:has(> h1 + h2) > :is(h1, h2) {
     grid-column: 1 / -1;
     margin: 0 0 0.625rem;
 }
 
-body > main > section:not(.carousel-viewport) > article {
+body > main:has(> h1 + h2) > article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,30 +111,30 @@ body > main > section:not(.carousel-viewport) > article {
     font-weight: bold;
 }
 
-body > main > section:not(.carousel-viewport) > article img {
+body > main:has(> h1 + h2) > article > img {
     width: 3.125rem;
     height: 3.125rem;
     margin-bottom: 0.5rem;
 }
 
-/* Proyectos: los artículos son hijos directos del main. */
-body > main > article {
+/* Proyectos: sus tarjetas contienen un encabezado h2. */
+body > main > article:has(> h2) {
     margin-bottom: 1.5625rem;
     padding: 1.25rem;
     border: thin solid #ddd;
     border-radius: 0.5rem;
-    background-color: black;
+    background-color: black; /* Definido  en body  */
     box-shadow: 0 0.125rem 0.3125rem rgb(0 0 0 / 5%);
     text-align: left;
     transition: box-shadow 0.3s ease;
 }
 
-body > main > article h2 {
+body > main > article:has(> h2) h2 {
     margin-top: 0;
-    color: #3498db;
+    color: #3498db; /* Definido en body > main > article  */
 }
 
-body > main > article a {
+body > main > article:has(> h2) a {
     display: inline-block;
     margin-right: 0.625rem;
     padding: 0.5rem 0.75rem;
@@ -145,14 +145,14 @@ body > main > article a {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-body > main > article:hover {
+body > main > article:has(> h2):hover {
     box-shadow: 0 0.25rem 0.625rem rgb(0 0 0 / 10%);
 }
 
 
 
-body > main > article a:hover {
-    background-color: #555;
+body > main > article:has(> h2) a:hover {
+    background-color: #555; /* Definido en body > main > article a */
 }
 
 /* Sobre mí */
@@ -208,7 +208,7 @@ body > main > p {
 }
 
 .carousel-btn:hover {
-    background-color: rgb(0 0 0 / 70%);
+    background-color: rgb(0 0 0 / 70%); /* Definido en body */
 }
 
 #prevBtn {
@@ -261,7 +261,7 @@ body > section:has(> hr + p > strong) > hr + p {
 }
 
 body > section:has(> hr + p > strong) > hr + p a {
-    color: #3498db;
+    color: #3498db; /* Definido en body  */
     font-weight: bold;
     text-decoration: none;
 }
@@ -270,6 +270,7 @@ body > section:has(> hr + p > strong) > hr + p a:hover {
     text-decoration: underline;
 }
 
+/* media queries */
 @media (max-width: 769px) {
     body {
         padding: 0.75rem;
